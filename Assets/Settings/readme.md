@@ -1,0 +1,1 @@
+Here In /Players you will have the actual Scriptable object asset file for some settings for the example player thingy
