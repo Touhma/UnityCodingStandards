@@ -9,7 +9,7 @@ namespace Players.Systems {
         // Example of System without the caching of the factory
         [BurstCompile]
         public void OnUpdate(ref SystemState state) {
-            EntityFactories.PlayerEntityFactory.CreatePlayer(ref state); // Then you can use it like this 
+            EntityFactories.PlayerEntityFactory.CreateEntity(ref state); // Then you can use it like this 
         }
     }
 }
