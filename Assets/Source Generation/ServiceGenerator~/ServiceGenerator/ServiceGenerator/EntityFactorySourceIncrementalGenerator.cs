@@ -13,7 +13,7 @@ namespace ServiceGenerator;
 /// When using the source code as a baseline, an incremental source generator is preferable because it reduces the performance overhead.
 /// </summary>
 [Generator]
-public class EntityFactorySourceGenerator : IIncrementalGenerator {
+public class EntityFactorySourceIncrementalGenerator : IIncrementalGenerator {
     public void Initialize(IncrementalGeneratorInitializationContext context) {
         // Filter structs annotated with the [EntityFactory] attribute. Only filtered Syntax Nodes can trigger code generation.
         IncrementalValuesProvider<((StructDeclarationSyntax, List<string> componentTypes), bool reportAttributeFound)> provider = context.SyntaxProvider
