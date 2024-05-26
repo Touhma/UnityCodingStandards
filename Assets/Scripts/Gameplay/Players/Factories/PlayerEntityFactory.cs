@@ -1,18 +1,8 @@
-﻿using System;
-using Players.Components;
-using Unity.Collections;
-using Unity.Entities;
-using Players.Factories;
-using Unity.Burst;
-
+﻿using Players.Components;
 using Commons.Architectures;
 
-
-
-using UnityEngine.Scripting;
-
 namespace Players.Factories {
-    /*
+    /* Now fully codegen 
     public struct PlayerEntityFactory : IDisposable {
         public EntityArchetype Archetype;
         public EntityQuery Query;
@@ -38,21 +28,14 @@ namespace Players.Factories {
         }
     }
     //*/
-
-    //*
+    
+    // only code necessary for the codegen to run
     [EntityFactory]
     [GenWith(typeof(PositionComponent), typeof(HealthComponent), typeof(PlayerStateEnabled), typeof(PlayerTag))]
-    public partial struct PlayerEntityFactory : IEntityFactory{ }
-    
-//*/
-    public interface IEntityFactory {
-        public void Setup(ref SystemState state);
-        public void Dispose();
-        public Entity CreateEntity(ref SystemState state);
-    }
+    public partial struct PlayerEntityFactory {}
 }
 
-//*
+/* Now fully codegen 
 // ReSharper disable once CheckNamespace
 namespace Commons.Architectures {
     // namespace necessary for the partial to take effect
