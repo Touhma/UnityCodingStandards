@@ -8,12 +8,15 @@ using EntityFactories = Commons.Architectures.EntityFactories;
 namespace Players.Systems {
     // Example of unmanaged Burstable System
     [UpdateInGroup(typeof(ExecutionSystemGroup))]
-    public partial struct PlayerDoingStuffSystem : ISystem {
-        private EntityQuery _query => EntityFactories.PlayerEntityFactory.Query;
+    public partial struct PlayerDoingStuffSystem : ISystem { 
+        
+        // Mandatory for the codegen of entities to do it's job
+        private static EntityQuery Query => EntityFactories.PlayerEntityFactory.Query;
 
         [BurstCompile]
         public void OnUpdate(ref SystemState state) {
-            new PlayerStuffJob().Schedule(_query); // or like this 
+            
+            new PlayerStuffJob().Schedule(Query);
         }
 
         [BurstCompile]
