@@ -10,7 +10,7 @@ using Microsoft.CodeAnalysis.Text;
 namespace ServiceGenerator;
 
 [Generator]
-public class EntityFactorySourceIncrementalGenerator : IIncrementalGenerator {
+public class EntityFactoryGenerator : IIncrementalGenerator {
     public void Initialize(IncrementalGeneratorInitializationContext context) {
         // Filter structs annotated with the [EntityFactory] attribute. Only filtered Syntax Nodes can trigger code generation.
         IncrementalValuesProvider<((StructDeclarationSyntax, List<string> componentTypes), bool reportAttributeFound)> provider = context.SyntaxProvider
