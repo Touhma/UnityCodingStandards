@@ -151,7 +151,6 @@ namespace Commons.ServicesLocator
             List<Type> sortedTypes = new();
             HashSet<Type> visited = new();
             HashSet<Type> temporaryMarked = new();
-            bool hasLoop = false;
 
             return types.Where(type => !visited.Contains(type)).Any(type => HasLoop(type, visited, temporaryMarked, sortedTypes)) ? null : sortedTypes;
         }
