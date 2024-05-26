@@ -9,10 +9,6 @@ using Microsoft.CodeAnalysis.Text;
 
 namespace ServiceGenerator;
 
-/// <summary>
-/// A sample source generator that creates a custom report based on class properties. The target class should be annotated with the 'Generators.ReportAttribute' attribute.
-/// When using the source code as a baseline, an incremental source generator is preferable because it reduces the performance overhead.
-/// </summary>
 [Generator]
 public class EntityFactorySourceIncrementalGenerator : IIncrementalGenerator {
     public void Initialize(IncrementalGeneratorInitializationContext context) {
@@ -30,10 +26,10 @@ public class EntityFactorySourceIncrementalGenerator : IIncrementalGenerator {
 
     private static ((StructDeclarationSyntax, List<string> componentTypes), bool reportAttributeFound) GetStructDeclarationForSourceGen(GeneratorSyntaxContext context) {
         StructDeclarationSyntax structDeclarationSyntax = (StructDeclarationSyntax)context.Node;
-        List<string> componentTypes = new();
+        List<string> componentTypes = [];
 
         foreach (AttributeSyntax attributeSyntax in structDeclarationSyntax.AttributeLists.SelectMany(attributeListSyntax => attributeListSyntax.Attributes)) {
-            if (ModelExtensions.GetSymbolInfo(context.SemanticModel, attributeSyntax).Symbol is not IMethodSymbol attributeSymbol) continue;
+            if (context.SemanticModel.GetSymbolInfo(attributeSyntax).Symbol is not IMethodSymbol attributeSymbol) continue;
 
             string attributeName = attributeSymbol.ContainingType.ToDisplayString();
 
@@ -63,7 +59,7 @@ public class EntityFactorySourceIncrementalGenerator : IIncrementalGenerator {
         string factoryName = structDeclarationSyntax.Identifier.Text;
         NamespaceDeclarationSyntax namespaceDeclaration = structDeclarationSyntax.Parent as NamespaceDeclarationSyntax;
         string namespaceName = namespaceDeclaration?.Name.ToString() ?? "UnknownNamespace";
-
+        
         // Go through all filtered class declarations.
         MemoryStream sourceStream = new();
         StreamWriter sourceStreamWriter = new(sourceStream, Encoding.UTF8);
@@ -83,7 +79,7 @@ public class EntityFactorySourceIncrementalGenerator : IIncrementalGenerator {
         codeWriter.Indent++;
         codeWriter.WriteLine("public EntityArchetype Archetype;");
         codeWriter.WriteLine("public EntityQuery Query;");
-        codeWriter.WriteLine("public PlayerEntityFactory Setup(ref SystemState state) {");
+        codeWriter.WriteLine($"public {factoryName} Setup(ref SystemState state) {{");
         // open Setup
         codeWriter.Indent++;
         codeWriter.WriteLine("NativeList<ComponentType> componentTypes = new(Allocator.Temp) {");
