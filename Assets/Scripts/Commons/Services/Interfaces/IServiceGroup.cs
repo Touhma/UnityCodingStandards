@@ -1,4 +1,4 @@
-﻿namespace Commons.ServicesLocator
+﻿namespace Commons.Services
 {
     public interface IServiceGroup { }
 }

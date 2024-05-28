@@ -5,14 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9aafa71-1a04-4869-aa37-3781315b8e11" name="Changes" comment="plop">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FactoryEntityGenerators/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FactoryEntityGenerators/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FactoryEntityGenerators/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FactoryEntityGenerators/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/GameLoop/SystemGroups/GameLoopGroups.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Scripts/Commons/GameLoop/SystemGroups/GameLoopGroups.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Factories/PlayerEntityFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Factories/PlayerEntityFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactoryGenerator/EntityFactoryGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactoryGenerator/EntityFactoryGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactoryGenerator/EntityFactoryInitGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactoryGenerator/EntityFactoryInitGenerator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/Attributes.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/Attributes/ServicesAttributes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/Attributes/ServicesAttributes.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/Interfaces.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/Interfaces/IServiceBase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/Interfaces/IServiceBase.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/Interfaces/IServiceGroup.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/Interfaces/IServiceGroup.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/Managed.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/Managed/ServiceLocator.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/PlaytypusGames.Commons.Architecture.Services.asmdef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/PlaytypusGames.Commons.Architecture.Services.asmdef.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactoryGenerator/ServiceBaseGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/ServicesGroup/GameplayServiceGroup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/ServicesGroup/GameplayServiceGroup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/Systems/GameLoopBootSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/Systems/GameLoopBootSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/ServicesLocator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/ServicesLocator/Attributes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/ServicesLocator/Attributes/ServicesAttributes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/ServicesLocator/Attributes/ServicesAttributes.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/ServicesLocator/Interfaces.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/ServicesLocator/Interfaces/IServiceBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/ServicesLocator/Interfaces/IServiceBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/ServicesLocator/Interfaces/IServiceGroup.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/ServicesLocator/Interfaces/IServiceGroup.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/ServicesLocator/Managed.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/ServicesLocator/Managed/ServiceLocator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/Managed/ServiceLocator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/ServicesLocator/Managed/ServiceLocator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Settings/Databases/PlayerSettingsManagedDB.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Settings/Databases/PlayerSettingsManagedDB.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FactoryEntityGenerators/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FactoryEntityGenerators/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../FactoryGenerator.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../FactoryGenerator.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../FactoryGenerator.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../FactoryGenerator.pdb" afterDir="false" />
     </list>

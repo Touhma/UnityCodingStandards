@@ -1,4 +1,4 @@
-﻿using Commons.ServicesLocator;
+﻿using Commons.Services;
 using Unity.Entities;
 using UnityEngine;
 

@@ -1,4 +1,4 @@
-﻿using Commons.ServicesLocator;
+﻿using Commons.Services;
 
 namespace Commons.Architectures {
     [InitializeBefore(typeof(GameplayServiceGroup))]

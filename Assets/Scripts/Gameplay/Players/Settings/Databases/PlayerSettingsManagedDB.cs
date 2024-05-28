@@ -1,21 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using Commons.Architectures;
-using Commons.ServicesLocator;
+using Commons.GameLoop;
+using Commons.Services;
 using JetBrains.Annotations;
-using Players.Settings.Databases;
 using UnityEngine;
-
-
-namespace Commons.Architectures { // Necessary for the partial to take effect - Could be codegen
-    public static partial class ManagedSettings {
-        public static PlayerSettingsManagedDB PlayerSettings =>  ServiceLocator.Current.Get<PlayerSettingsManagedDB>();
-    }
-}
 
 namespace Players.Settings.Databases {
     [UsedImplicitly]
-    [InitializeInGroup(typeof(SettingsServiceGroup))]
+    [InitializeInGroup(typeof(GameLoopDatabasesInitialisationGroup))]
     public class PlayerSettingsManagedDB : IServiceBase {
         public readonly Dictionary<Type, ScriptableObject> Settings = new();
 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using UnityEngine;
 
-namespace Commons.ServicesLocator
+namespace Commons.Services
 {
     public class ServiceLocator
     {
@@ -151,6 +151,7 @@ namespace Commons.ServicesLocator
             List<Type> sortedTypes = new();
             HashSet<Type> visited = new();
             HashSet<Type> temporaryMarked = new();
+            bool hasLoop = false;
 
             return types.Where(type => !visited.Contains(type)).Any(type => HasLoop(type, visited, temporaryMarked, sortedTypes)) ? null : sortedTypes;
         }
