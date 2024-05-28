@@ -26,20 +26,19 @@ public class EntityFactoryInitGenerator : IIncrementalGenerator {
 
     private static ((StructDeclarationSyntax, List<string> factoryNames), bool reportAttributeFound) GetStructDeclarationForSourceGen(GeneratorSyntaxContext context) {
         // Cast the node to StructDeclarationSyntax
-        var structDeclarationSyntax = (StructDeclarationSyntax)context.Node;
+        StructDeclarationSyntax structDeclarationSyntax = (StructDeclarationSyntax)context.Node;
         List<string> factoryNames = new();
 
         // Iterate over attributes in the struct
-        foreach (var attributeSyntax in structDeclarationSyntax.AttributeLists.SelectMany(attributeList => attributeList.Attributes)) {
+        foreach (AttributeSyntax attributeSyntax in structDeclarationSyntax.AttributeLists.SelectMany(attributeList => attributeList.Attributes)) {
             // Get the symbol information for the attribute
             if (context.SemanticModel.GetSymbolInfo(attributeSyntax).Symbol is not IMethodSymbol attributeSymbol) continue;
 
             // Check if the attribute is [EntityFactory]
-            if (attributeSymbol.ContainingType.ToDisplayString() == "Commons.Architectures.EntityFactory") {
-                // Add the factory name
-                factoryNames.Add(structDeclarationSyntax.Identifier.Text);
-                return ((structDeclarationSyntax, factoryNames), true);
-            }
+            if (attributeSymbol.ContainingType.ToDisplayString() != "Commons.Architectures.EntityFactory") continue;
+            // Add the factory name
+            factoryNames.Add(structDeclarationSyntax.Identifier.Text);
+            return ((structDeclarationSyntax, factoryNames), true);
         }
 
         // Return the struct and indicate the attribute was not found
