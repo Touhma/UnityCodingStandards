@@ -16,6 +16,10 @@ namespace Commons.GameLoop
     public partial class GameLoopPreTransformSystemGroup : ComponentSystemGroup { } // The gameloop execute BEFORE the transform Update
 
     [UpdateInGroup(typeof(GameLoopSystemGroup))]
+    [UpdateBefore(typeof(GameLoopSingletonsInitialisationGroup))]
+    public partial class GameLoopEntityFactoryInitialisationGroup : ComponentSystemGroup { }
+    
+    [UpdateInGroup(typeof(GameLoopSystemGroup))]
     [UpdateBefore(typeof(GameLoopServicesInitialisationGroup))]
     public partial class GameLoopSingletonsInitialisationGroup : ComponentSystemGroup { }
 

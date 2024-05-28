@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d9aafa71-1a04-4869-aa37-3781315b8e11" name="Changes" comment="plop">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.FactoryEntityGenerators/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.FactoryEntityGenerators/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.FactoryEntityGenerators/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.FactoryEntityGenerators/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/GameLoop/SystemGroups/GameLoopGroups.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Scripts/Commons/GameLoop/SystemGroups/GameLoopGroups.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Factories/PlayerEntityFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Factories/PlayerEntityFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactoryGenerator/EntityFactoryGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactoryGenerator/EntityFactoryGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactoryGenerator/EntityFactoryInitGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactoryGenerator/EntityFactoryInitGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FactoryGenerator.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../FactoryGenerator.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FactoryGenerator.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../FactoryGenerator.pdb" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://E:/Unity Project/Learning/UnityCodingStandards/Assets/Source Generation/FactoryEntityGenerators~/FactoryEntityGenerators/FactoryGenerator/EntityFactoryGenerator.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2h7CE19yvAE80EOg8IHsvb9KKwB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\Touhma\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Touhma\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\Touhma\\AppData\\Local\\Symbols\\src"
+    ]
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="plop" />
+    <option name="LAST_COMMIT_MESSAGE" value="plop" />
+  </component>
+</project>

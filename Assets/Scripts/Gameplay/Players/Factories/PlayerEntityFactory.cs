@@ -2,11 +2,10 @@
 using Commons.Architectures;
 
 namespace Players.Factories {
-    // only code necessary for the codegen to run
     [EntityFactory]
     [GenWith(typeof(PositionComponent), typeof(HealthComponent), typeof(PlayerStateEnabled), typeof(PlayerTag))]
     public partial struct PlayerEntityFactory {}
-    
+}
     /* Now fully codegen 
     public struct PlayerEntityFactory : IDisposable {
         public EntityArchetype Archetype;
@@ -33,7 +32,7 @@ namespace Players.Factories {
         }
     }
     //*/
-}
+
 
 /* Now fully codegen 
 // ReSharper disable once CheckNamespace
