@@ -1,20 +1,13 @@
 ﻿using System;
+using Commons.Architectures;
 using Players.Components;
-using Players.Settings.Databases;
-using Unity.Burst;
 using Unity.Collections;
 
-namespace Commons.Architectures {
-    public static partial class UnmanagedSettingsStatics { // Necessary for the partial to take effect - Could be codegen
-        public static readonly SharedStatic<PlayerItemsSettingsUnmanagedDB> PlayerItemSettingsDB = SharedStatic<PlayerItemsSettingsUnmanagedDB>.GetOrCreate<PlayerItemsSettingsUnmanagedDB, StaticFieldKey>();
-    }
-    public static partial class UnmanagedSettings { // Necessary for the partial to take effect - Could be codegen
-        public static PlayerItemsSettingsUnmanagedDB PlayerItemSettingsDB => UnmanagedSettingsStatics.PlayerItemSettingsDB.Data;
-    }
-}
 
+//*
 namespace Players.Settings.Databases {
     // this is an example of an unmanaged DB, could be usefull in certain situation when these settings need to be accessed from burst jobs ( Like crafting elements, recipes etc ... ) 
+    [UnmanagedSetting] // This will create a UnmanagedSetting shared static & it's shorcut so you can call : UnmanagedSetting.PlayerItemsSettingsUnmanagedDB directly
     public struct PlayerItemsSettingsUnmanagedDB : IDisposable {
         
         public NativeHashMap<int, PlayerItemsSettings> DB;
@@ -28,3 +21,4 @@ namespace Players.Settings.Databases {
         public void Dispose() => DB.Dispose();
     }
 }
+//*/

@@ -2,48 +2,9 @@
 using Commons.Architectures;
 
 namespace Players.Factories {
+    // This will create a UnmanagedSetting shared static & it's shorcut so you can call : EntityFactory.PlayerEntityFactory directly
     [EntityFactory]
+    // this is the list of all the components you want your entity to have
     [GenWith(typeof(PositionComponent), typeof(HealthComponent), typeof(PlayerStateEnabled), typeof(PlayerTag))]
-    public partial struct PlayerEntityFactory {}
+    public partial struct PlayerEntityFactory { }
 }
-    /* Now fully codegen 
-    public struct PlayerEntityFactory : IDisposable {
-        public EntityArchetype Archetype;
-        public EntityQuery Query;
-
-        public PlayerEntityFactory(ref SystemState state) {
-            NativeList<ComponentType> componentTypes = new(Allocator.Temp) {
-                ComponentType.ReadWrite<PositionComponent>(),
-                ComponentType.ReadWrite<HealthComponent>(),
-                ComponentType.ReadWrite<PlayerTag>(),
-                ComponentType.ReadWrite<PlayerStateEnabled>()
-            };
-
-            Archetype = state.EntityManager.CreateArchetype(componentTypes.AsArray()); // Caching the Archetype
-            Query = new EntityQueryBuilder(Allocator.Temp).WithAll(ref componentTypes).Build(ref state); // Caching the Query matching the archetype
-
-            componentTypes.Dispose();
-        }
-
-        public Entity CreateEntity(ref SystemState state) => state.EntityManager.CreateEntity(Archetype); // Use this method to instanciate something with the same archetype
-
-        public void Dispose() {
-            Query.Dispose();
-        }
-    }
-    //*/
-
-
-/* Now fully codegen 
-// ReSharper disable once CheckNamespace
-namespace Commons.Architectures {
-    // namespace necessary for the partial to take effect
-    public static partial class EntityFactoriesStatics {
-        public static readonly SharedStatic<PlayerEntityFactory> PlayerEntityFactory = SharedStatic<PlayerEntityFactory>.GetOrCreate<PlayerEntityFactory, StaticFieldKey>();
-    }
-
-    public static partial class EntityFactories {
-        public static ref PlayerEntityFactory PlayerEntityFactory => ref EntityFactoriesStatics.PlayerEntityFactory.Data;
-    }
-}
-//*/

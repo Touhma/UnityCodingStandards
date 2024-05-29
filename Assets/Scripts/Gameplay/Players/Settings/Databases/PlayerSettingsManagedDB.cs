@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using Commons.GameLoop;
+using Commons.Architectures;
 using Commons.Services;
+using Commons.Services.ServiceGroups;
 using JetBrains.Annotations;
 using UnityEngine;
 
 namespace Players.Settings.Databases {
     [UsedImplicitly]
-    [InitializeInGroup(typeof(GameLoopDatabasesInitialisationGroup))]
+    [ManagedSetting] // This will create a ManagedSettings shortcut so you can call : ManagedSettings.PlayerSettingsManagedDB directly
+    [InitializeInGroup(typeof(SettingsServiceGroup))] // use the ServiceGroup attributes for initialization of services or else it's not gonna register
     public class PlayerSettingsManagedDB : IServiceBase {
         public readonly Dictionary<Type, ScriptableObject> Settings = new();
 

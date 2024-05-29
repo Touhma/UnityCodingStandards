@@ -1,12 +1,14 @@
-﻿using Commons.Services;
+﻿using Commons.GameLoop;
+using Commons.Services;
 using Unity.Entities;
 using UnityEngine;
 
 namespace Commons.Architectures {
-    [UpdateInGroup(typeof(Unity.Entities.InitializationSystemGroup))]
+    [UpdateInGroup(typeof(GameLoopServicesInitialisationGroup))]
     public partial struct GameLoopBootSystem : ISystem // First system to run in the game. Initialize the services.
     {
         public void OnCreate(ref SystemState state) {
+            Debug.Log("GameLoopBootSystem - OnCreate ");
             Application.targetFrameRate = -1; // Unlock framerate , because why not ?
             InitializeServicesBase();
         }

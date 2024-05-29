@@ -4,37 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9aafa71-1a04-4869-aa37-3781315b8e11" name="Changes" comment="plop">
-      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/Attributes.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/Attributes/ServicesAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/Attributes/ServicesAttributes.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/Interfaces.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/Interfaces/IServiceBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/Interfaces/IServiceBase.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/Interfaces/IServiceGroup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/Interfaces/IServiceGroup.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/Managed.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/Managed/ServiceLocator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/PlaytypusGames.Commons.Architecture.Services.asmdef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/PlaytypusGames.Commons.Architecture.Services.asmdef.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactoryGenerator/ServiceBaseGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/ServicesGroup/GameplayServiceGroup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/ServicesGroup/GameplayServiceGroup.cs" afterDir="false" />
+    <list default="true" id="d9aafa71-1a04-4869-aa37-3781315b8e11" name="Changes" comment="Update">
+      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/Attributes/SettingsAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/Attributes/SettingsAttribute.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/ServiceGroups.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/ServiceGroups/GameplayServiceGroup.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactoryGenerator/EntityFactoryShortcutsGenerator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FactoryGenerator/UnmanagedSettingsShortcutsGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/ServicesGroup.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/ServicesGroup/GameplayServiceGroup.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/ServicesGroup/GameplayServiceGroup.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/Settings.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/Settings/ManagedSettings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/Settings/ManagedSettings.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/Settings/UnmanagedSettings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/Settings/UnmanagedSettings.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/SharedStatics.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/SharedStatics/EntityFactories.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/SharedStatics/EntityFactories.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/Systems/GameLoopBootSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/Systems/GameLoopBootSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/ServicesLocator.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/ServicesLocator/Attributes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/ServicesLocator/Attributes/ServicesAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/ServicesLocator/Attributes/ServicesAttributes.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/ServicesLocator/Interfaces.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/ServicesLocator/Interfaces/IServiceBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/ServicesLocator/Interfaces/IServiceBase.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/ServicesLocator/Interfaces/IServiceGroup.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/ServicesLocator/Interfaces/IServiceGroup.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/ServicesLocator/Managed.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/ServicesLocator/Managed/ServiceLocator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/Managed/ServiceLocator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/ServicesLocator/Managed/ServiceLocator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/Services/Managed/ServiceLocator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/Managed/ServiceLocator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Factories/PlayerEntityFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Factories/PlayerEntityFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Settings/Databases/PlayerItemsSettingsUnmanagedDB.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Settings/Databases/PlayerItemsSettingsUnmanagedDB.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Settings/Databases/PlayerSettingsManagedDB.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Settings/Databases/PlayerSettingsManagedDB.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Systems/StateUpdate/PlayerManagedSettingsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Systems/StateUpdate/PlayerManagedSettingsSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FactoryEntityGenerators/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FactoryEntityGenerators/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactoryGenerator/EntityFactoryGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactoryGenerator/EntityFactoryGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactoryGenerator/ServiceBaseGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactoryGenerator/ManagedSettingsShortcutsGenerator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../FactoryGenerator.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../FactoryGenerator.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../FactoryGenerator.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../FactoryGenerator.pdb" afterDir="false" />
     </list>
@@ -78,6 +74,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="plop" />
-    <option name="LAST_COMMIT_MESSAGE" value="plop" />
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
 </project>

@@ -143,34 +143,6 @@ public class EntityFactoryGenerator : IIncrementalGenerator {
         codeWriter.Indent--;
         codeWriter.WriteLine("}");
 
-        // Add partial code 
-  
-        codeWriter.WriteLine("namespace Commons.Architectures {");
-        codeWriter.WriteLine("// namespace necessary for the partial to take effect");
-        // open namespace
-        codeWriter.Indent++;
-        codeWriter.WriteLine("public static partial class EntityFactoriesStatics {");
-        // open class
-        codeWriter.Indent++;
-        codeWriter.WriteLine($"public static readonly SharedStatic<{factoryName}> {factoryName} = SharedStatic<{factoryName}>.GetOrCreate<{factoryName}, StaticFieldKey>();");
-        // close class
-        codeWriter.Indent--;
-        codeWriter.WriteLine("}");
-
-        codeWriter.WriteLine("public static partial class EntityFactories {");
-        // open static
-        codeWriter.Indent++;
-        codeWriter.WriteLine("// Call this to access data in the factory ");
-        codeWriter.WriteLine($"public static ref {factoryName} {factoryName} => ref EntityFactoriesStatics.{factoryName}.Data;");
-        codeWriter.WriteLine("// Call this to setup the factory");
-        codeWriter.WriteLine($"public static {factoryName} {factoryName}Setup(ref SystemState state) => EntityFactoriesStatics.{factoryName}.Data = new {factoryName}().Setup(ref state);");
-        // close static
-        codeWriter.Indent--;
-        codeWriter.WriteLine("}");
-        // close namespace
-        codeWriter.Indent--;
-        codeWriter.WriteLine("}");
-
         sourceStreamWriter.Flush();
 
         context.AddSource($"{factoryName}.g.cs", SourceText.From(sourceStream, Encoding.UTF8, canBeEmbedded: true));
