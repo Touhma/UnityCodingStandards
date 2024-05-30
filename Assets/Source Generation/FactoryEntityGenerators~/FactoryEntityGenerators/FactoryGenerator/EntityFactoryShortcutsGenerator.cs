@@ -47,14 +47,12 @@ namespace ServiceGenerator {
 
 
         private static void GenerateCode(SourceProductionContext context, ImmutableArray<(StructDeclarationSyntax structDeclaration, string Name, string Namespace)> structs) {
-            if (structs.IsDefaultOrEmpty)
-                return;
+            if (structs.IsDefaultOrEmpty) return;
 
             // Filter valid entries
             List<(StructDeclarationSyntax structDeclaration, string Name, string Namespace)> validStructs = structs.Where(s => !string.IsNullOrEmpty(s.Name)).ToList();
 
-            if (!validStructs.Any())
-                return;
+            if (!validStructs.Any()) return;
 
             using MemoryStream sourceStream = new();
             using StreamWriter sourceStreamWriter = new(sourceStream, Encoding.UTF8);
@@ -67,20 +65,21 @@ namespace ServiceGenerator {
             foreach (string namesSpace in validStructs.Select(s => s.Namespace).Distinct()) {
                 codeWriter.WriteLine($"using {namesSpace};");
             }
-            
+
             codeWriter.WriteLine("namespace Commons.Architectures {");
             // open namespace
             codeWriter.Indent++;
             codeWriter.WriteLine("public static class EntityFactoriesStatics {");
-            
+
             // open class
             codeWriter.Indent++;
             codeWriter.WriteLine("public abstract class StaticFieldKey { }");
-            
+
             foreach ((StructDeclarationSyntax structDeclaration, string Name, string Namespace) vStruct in validStructs) {
                 codeWriter.WriteLine($"public static readonly SharedStatic<{vStruct.Name}> {vStruct.Name} = SharedStatic<{vStruct.Name}>.GetOrCreate<{vStruct.Name}, StaticFieldKey>();");
             }
-             // close class
+
+            // close class
             codeWriter.Indent--;
             codeWriter.WriteLine("}");
 
@@ -91,10 +90,12 @@ namespace ServiceGenerator {
             foreach ((StructDeclarationSyntax structDeclaration, string Name, string Namespace) vStruct in validStructs) {
                 codeWriter.WriteLine($"public static ref {vStruct.Name} {vStruct.Name} => ref EntityFactoriesStatics.{vStruct.Name}.Data;");
             }
+
             codeWriter.WriteLine("// Call this to setup the factories");
             foreach ((StructDeclarationSyntax structDeclaration, string Name, string Namespace) vStruct in validStructs) {
                 codeWriter.WriteLine($"public static {vStruct.Name} {vStruct.Name}Setup(ref SystemState state) => EntityFactoriesStatics.{vStruct.Name}.Data = new {vStruct.Name}().Setup(ref state);");
             }
+
             // close static
             codeWriter.Indent--;
             codeWriter.WriteLine("}");

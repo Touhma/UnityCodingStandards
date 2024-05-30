@@ -32,6 +32,7 @@ namespace Players.Settings.Databases {
         }
     }
     
+    /*
     [UsedImplicitly]
     [ManagedSetting] // This will create a ManagedSettings shortcut so you can call : ManagedSettings.PlayerSettingsManagedDB directly
     [InitializeInGroup(typeof(SettingsServiceGroup))] // use the ServiceGroup attributes for initialization of services or else it's not gonna register
@@ -56,4 +57,5 @@ namespace Players.Settings.Databases {
             return Settings.TryGetValue(typeof(T), out ScriptableObject setting) ? setting as T : null;
         }
     }
+    //*/
 }

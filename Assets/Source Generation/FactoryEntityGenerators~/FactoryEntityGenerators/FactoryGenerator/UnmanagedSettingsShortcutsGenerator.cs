@@ -46,14 +46,12 @@ namespace ServiceGenerator {
         }
         
         private static void GenerateCode(SourceProductionContext context, ImmutableArray<(StructDeclarationSyntax structDeclaration, string Name, string Namespace)> structs) {
-            if (structs.IsDefaultOrEmpty)
-                return;
+            if (structs.IsDefaultOrEmpty) return;
 
             // Filter valid entries
             List<(StructDeclarationSyntax structDeclaration, string Name, string Namespace)> validStructs = structs.Where(s => !string.IsNullOrEmpty(s.Name)).ToList();
 
-            if (!validStructs.Any())
-                return;
+            if (!validStructs.Any()) return;
 
             // Go through all filtered class declarations.
             MemoryStream sourceStream = new();

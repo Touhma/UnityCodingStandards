@@ -8,6 +8,7 @@ namespace Players.Factories {
     [GenWith(typeof(PositionComponent), typeof(HealthComponent), typeof(PlayerStateEnabled), typeof(PlayerTag))]
     public partial struct PlayerEntityFactory { }
     
+    /*
     [EntityFactory]
     [GenWith(typeof(PositionComponent), typeof(HealthComponent), typeof(PlayerStateEnabled), typeof(PlayerTag))]
     public partial struct PlayerEntityFactory2 { }
@@ -19,4 +20,5 @@ namespace Players.Factories {
     [EntityFactory]
     [GenWith(typeof(PositionComponent), typeof(HealthComponent), typeof(PlayerStateEnabled), typeof(PlayerTag))]
     public partial struct PlayerEntityFactory4 { }
+    */
 }

@@ -21,6 +21,7 @@ namespace Players.Settings.Databases {
         public void Dispose() => DB.Dispose();
     }
     
+    /*
     [UnmanagedSetting] // This will create a UnmanagedSetting shared static & it's shorcut so you can call : UnmanagedSetting.PlayerItemsSettingsUnmanagedDB directly
     public struct PlayerItemsSettingsUnmanagedDB2 : IDisposable {
         
@@ -34,5 +35,6 @@ namespace Players.Settings.Databases {
 
         public void Dispose() => DB.Dispose();
     }
+    //*/
 }
 //*/
