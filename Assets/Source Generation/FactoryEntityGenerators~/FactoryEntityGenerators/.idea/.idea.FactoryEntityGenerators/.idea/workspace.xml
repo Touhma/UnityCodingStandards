@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9aafa71-1a04-4869-aa37-3781315b8e11" name="Changes" comment="Update">
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Factories/PlayerEntityFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Factories/PlayerEntityFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FactoryEntityGenerators/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FactoryEntityGenerators/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="d9aafa71-1a04-4869-aa37-3781315b8e11" name="Changes" comment="Fix Factories shortcuts">
       <change beforePath="$PROJECT_DIR$/FactoryGenerator/EntityFactoryShortcutsGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactoryGenerator/EntityFactoryShortcutsGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactoryGenerator/UnmanagedSettingsShortcutsGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactoryGenerator/UnmanagedSettingsShortcutsGenerator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../FactoryGenerator.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../FactoryGenerator.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../FactoryGenerator.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../FactoryGenerator.pdb" afterDir="false" />
     </list>
@@ -21,6 +20,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://E:/Unity Project/Learning/UnityCodingStandards/Assets/Source Generation/FactoryEntityGenerators~/FactoryEntityGenerators/FactoryGenerator/EntityFactoryShortcutsGenerator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity Project/Learning/UnityCodingStandards/Assets/Source Generation/FactoryEntityGenerators~/FactoryEntityGenerators/FactoryGenerator/UnmanagedSettingsShortcutsGenerator.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -52,6 +52,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="plop" />
     <MESSAGE value="Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update" />
+    <MESSAGE value="Fix Factories shortcuts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix Factories shortcuts" />
   </component>
 </project>

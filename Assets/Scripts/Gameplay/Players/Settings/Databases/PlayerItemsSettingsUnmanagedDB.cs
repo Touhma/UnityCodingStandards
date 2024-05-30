@@ -20,5 +20,19 @@ namespace Players.Settings.Databases {
 
         public void Dispose() => DB.Dispose();
     }
+    
+    [UnmanagedSetting] // This will create a UnmanagedSetting shared static & it's shorcut so you can call : UnmanagedSetting.PlayerItemsSettingsUnmanagedDB directly
+    public struct PlayerItemsSettingsUnmanagedDB2 : IDisposable {
+        
+        public NativeHashMap<int, PlayerItemsSettings> DB;
+
+        public PlayerItemsSettingsUnmanagedDB2(int bufferLength) => DB = new NativeHashMap<int, PlayerItemsSettings>(bufferLength, Allocator.Persistent);
+
+        public PlayerItemsSettings GetSetting(int id) => DB[id];
+
+        public void AddSetting(PlayerItemsSettings setting) => DB.Add(setting.ItemID, setting);
+
+        public void Dispose() => DB.Dispose();
+    }
 }
 //*/

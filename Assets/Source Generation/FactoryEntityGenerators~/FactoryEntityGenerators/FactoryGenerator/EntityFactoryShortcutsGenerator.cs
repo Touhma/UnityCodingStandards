@@ -21,7 +21,7 @@ namespace ServiceGenerator {
                 .Select((t, _) => t.data);
 
             // Combine all results into a single collection
-            var combinedProvider = provider.Collect();
+            IncrementalValueProvider<ImmutableArray<(StructDeclarationSyntax structDeclaration, string Name, string Namespace)>> combinedProvider = provider.Collect();
 
             // Generate the source code.
             context.RegisterSourceOutput(combinedProvider, GenerateCode);
