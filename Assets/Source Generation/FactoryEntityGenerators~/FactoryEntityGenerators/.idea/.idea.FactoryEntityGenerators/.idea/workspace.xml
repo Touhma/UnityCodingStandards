@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9aafa71-1a04-4869-aa37-3781315b8e11" name="Changes" comment="Fix Factories shortcuts">
-      <change beforePath="$PROJECT_DIR$/FactoryGenerator/EntityFactoryShortcutsGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactoryGenerator/EntityFactoryShortcutsGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactoryGenerator/UnmanagedSettingsShortcutsGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactoryGenerator/UnmanagedSettingsShortcutsGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FactoryGenerator.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../FactoryGenerator.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FactoryGenerator.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../FactoryGenerator.pdb" afterDir="false" />
+    <list default="true" id="d9aafa71-1a04-4869-aa37-3781315b8e11" name="Changes" comment="Fixed unmanaged settings shortcut !">
+      <change beforePath="$PROJECT_DIR$/FactoryGenerator/ManagedSettingsShortcutsGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactoryGenerator/ManagedSettingsShortcutsGenerator.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +50,7 @@
     <MESSAGE value="plop" />
     <MESSAGE value="Update" />
     <MESSAGE value="Fix Factories shortcuts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix Factories shortcuts" />
+    <MESSAGE value="Fixed unmanaged settings shortcut !" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed unmanaged settings shortcut !" />
   </component>
 </project>
