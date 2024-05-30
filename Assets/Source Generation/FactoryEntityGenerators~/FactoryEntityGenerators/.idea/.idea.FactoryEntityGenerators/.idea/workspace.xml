@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9aafa71-1a04-4869-aa37-3781315b8e11" name="Changes" comment="Update" />
+    <list default="true" id="d9aafa71-1a04-4869-aa37-3781315b8e11" name="Changes" comment="Update">
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Factories/PlayerEntityFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Factories/PlayerEntityFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FactoryEntityGenerators/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FactoryEntityGenerators/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactoryGenerator/EntityFactoryShortcutsGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactoryGenerator/EntityFactoryShortcutsGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FactoryGenerator.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../FactoryGenerator.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FactoryGenerator.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../FactoryGenerator.pdb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +20,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://E:/Unity Project/Learning/UnityCodingStandards/Assets/Source Generation/FactoryEntityGenerators~/FactoryEntityGenerators/FactoryGenerator/EntityFactoryGenerator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity Project/Learning/UnityCodingStandards/Assets/Source Generation/FactoryEntityGenerators~/FactoryEntityGenerators/FactoryGenerator/EntityFactoryShortcutsGenerator.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{

@@ -1,5 +1,6 @@
 ﻿using System.CodeDom.Compiler;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -12,57 +13,58 @@ namespace ServiceGenerator {
     public class EntityFactoryShortcutsGenerator : IIncrementalGenerator {
         public void Initialize(IncrementalGeneratorInitializationContext context) {
             // Create a provider to filter structs annotated with the [EntityFactory] attribute
-            IncrementalValuesProvider<((StructDeclarationSyntax, List<string> Names, List<string>NamesSpaces), bool reportInterfaceImplemented)> provider = context.SyntaxProvider
+            IncrementalValuesProvider<(StructDeclarationSyntax structDeclaration, string Name, string Namespace)> provider = context.SyntaxProvider
                 .CreateSyntaxProvider(
                     (s, _) => s is StructDeclarationSyntax,
                     (ctx, _) => GetStructDeclarationForSourceGen(ctx))
-                .Where(t => t.reportAttributeFound)
-                .Select((t, _) => t);
+                .Where(t => t.foundAttribute)
+                .Select((t, _) => t.data);
+
+            // Combine all results into a single collection
+            var combinedProvider = provider.Collect();
 
             // Generate the source code.
-            context.RegisterSourceOutput(provider, GenerateCode);
+            context.RegisterSourceOutput(combinedProvider, GenerateCode);
         }
 
-        private static ((StructDeclarationSyntax, List<string> Names, List<string>NamesSpaces), bool reportAttributeFound) GetStructDeclarationForSourceGen(GeneratorSyntaxContext context) {
-            // Cast the node to StructDeclarationSyntax
+        private static ((StructDeclarationSyntax structDeclaration, string Name, string Namespace) data, bool foundAttribute) GetStructDeclarationForSourceGen(GeneratorSyntaxContext context) {
             StructDeclarationSyntax structDeclarationSyntax = (StructDeclarationSyntax)context.Node;
-            List<string> names = new();
-            List<string> namesSpaces = new();
 
             // Iterate over attributes in the struct
             foreach (AttributeSyntax attributeSyntax in structDeclarationSyntax.AttributeLists.SelectMany(attributeList => attributeList.Attributes)) {
-                // Get the symbol information for the attribute
                 if (context.SemanticModel.GetSymbolInfo(attributeSyntax).Symbol is not IMethodSymbol attributeSymbol) continue;
 
-                // Check if the attribute is [UnmanagedSetting]
                 if (attributeSymbol.ContainingType.ToDisplayString() != "Commons.Architectures.EntityFactory") continue;
-                // Add the factory name
-                names.Add(structDeclarationSyntax.Identifier.Text);
 
-                NamespaceDeclarationSyntax namespaceDeclaration = structDeclarationSyntax.Parent as NamespaceDeclarationSyntax;
-                namesSpaces.Add(namespaceDeclaration?.Name.ToString() ?? "UnknownNamespace");
+                string name = structDeclarationSyntax.Identifier.Text;
+                string namespaceName = (structDeclarationSyntax.Parent as NamespaceDeclarationSyntax)?.Name.ToString() ?? "UnknownNamespace";
 
-                return ((structDeclarationSyntax, names, namesSpaces), true);
+                return ((structDeclarationSyntax, name, namespaceName), true);
             }
 
-            // Return the struct and indicate the attribute was not found
-            return ((structDeclarationSyntax, names, namesSpaces), false);
+            return ((structDeclarationSyntax, string.Empty, string.Empty), false);
         }
 
-        public static void GenerateCode(SourceProductionContext context, ((StructDeclarationSyntax structDeclaration, List<string> Names, List<string>NamesSpaces) data, bool _) input) {
-            List<string> names = input.data.Names;
-            List<string> namesSpaces = input.data.NamesSpaces;
 
-            // Go through all filtered class declarations.
-            MemoryStream sourceStream = new();
-            StreamWriter sourceStreamWriter = new(sourceStream, Encoding.UTF8);
-            IndentedTextWriter codeWriter = new(sourceStreamWriter);
+        private static void GenerateCode(SourceProductionContext context, ImmutableArray<(StructDeclarationSyntax structDeclaration, string Name, string Namespace)> structs) {
+            if (structs.IsDefaultOrEmpty)
+                return;
+
+            // Filter valid entries
+            List<(StructDeclarationSyntax structDeclaration, string Name, string Namespace)> validStructs = structs.Where(s => !string.IsNullOrEmpty(s.Name)).ToList();
+
+            if (!validStructs.Any())
+                return;
+
+            using MemoryStream sourceStream = new();
+            using StreamWriter sourceStreamWriter = new(sourceStream, Encoding.UTF8);
+            using IndentedTextWriter codeWriter = new(sourceStreamWriter);
 
             // Add partial code 
             codeWriter.WriteLine("// <auto-generated/>");
             codeWriter.WriteLine("using Unity.Burst;");
             codeWriter.WriteLine("using Unity.Entities;");
-            foreach (string namesSpace in namesSpaces) {
+            foreach (string namesSpace in validStructs.Select(s => s.Namespace).Distinct()) {
                 codeWriter.WriteLine($"using {namesSpace};");
             }
             
@@ -75,8 +77,8 @@ namespace ServiceGenerator {
             codeWriter.Indent++;
             codeWriter.WriteLine("public abstract class StaticFieldKey { }");
             
-            foreach (string name in names) {
-                codeWriter.WriteLine($"public static readonly SharedStatic<{name}> {name} = SharedStatic<{name}>.GetOrCreate<{name}, StaticFieldKey>();");
+            foreach ((StructDeclarationSyntax structDeclaration, string Name, string Namespace) vStruct in validStructs) {
+                codeWriter.WriteLine($"public static readonly SharedStatic<{vStruct.Name}> {vStruct.Name} = SharedStatic<{vStruct.Name}>.GetOrCreate<{vStruct.Name}, StaticFieldKey>();");
             }
              // close class
             codeWriter.Indent--;
@@ -86,12 +88,12 @@ namespace ServiceGenerator {
             // open static
             codeWriter.Indent++;
             codeWriter.WriteLine("// Call this to access data in the factories ");
-            foreach (string name in names) {
-                codeWriter.WriteLine($"public static ref {name} {name} => ref EntityFactoriesStatics.{name}.Data;");
+            foreach ((StructDeclarationSyntax structDeclaration, string Name, string Namespace) vStruct in validStructs) {
+                codeWriter.WriteLine($"public static ref {vStruct.Name} {vStruct.Name} => ref EntityFactoriesStatics.{vStruct.Name}.Data;");
             }
             codeWriter.WriteLine("// Call this to setup the factories");
-            foreach (string name in names) {
-                codeWriter.WriteLine($"public static {name} {name}Setup(ref SystemState state) => EntityFactoriesStatics.{name}.Data = new {name}().Setup(ref state);");
+            foreach ((StructDeclarationSyntax structDeclaration, string Name, string Namespace) vStruct in validStructs) {
+                codeWriter.WriteLine($"public static {vStruct.Name} {vStruct.Name}Setup(ref SystemState state) => EntityFactoriesStatics.{vStruct.Name}.Data = new {vStruct.Name}().Setup(ref state);");
             }
             // close static
             codeWriter.Indent--;
