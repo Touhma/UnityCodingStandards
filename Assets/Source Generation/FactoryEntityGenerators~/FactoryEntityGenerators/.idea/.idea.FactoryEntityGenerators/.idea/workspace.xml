@@ -4,36 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9aafa71-1a04-4869-aa37-3781315b8e11" name="Changes" comment="Update">
-      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/Attributes/SettingsAttribute.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/Attributes/SettingsAttribute.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/ServiceGroups.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/ServiceGroups/GameplayServiceGroup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactoryGenerator/EntityFactoryShortcutsGenerator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactoryGenerator/UnmanagedSettingsShortcutsGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/ServicesGroup.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/ServicesGroup/GameplayServiceGroup.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/ServicesGroup/GameplayServiceGroup.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/Settings.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/Settings/ManagedSettings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/Settings/ManagedSettings.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/Settings/UnmanagedSettings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/Settings/UnmanagedSettings.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/SharedStatics.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/SharedStatics/EntityFactories.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/SharedStatics/EntityFactories.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/Systems/GameLoopBootSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/Systems/GameLoopBootSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Commons/Services/Managed/ServiceLocator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Services/Managed/ServiceLocator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Factories/PlayerEntityFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Factories/PlayerEntityFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Settings/Databases/PlayerItemsSettingsUnmanagedDB.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Settings/Databases/PlayerItemsSettingsUnmanagedDB.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Settings/Databases/PlayerSettingsManagedDB.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Settings/Databases/PlayerSettingsManagedDB.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Systems/StateUpdate/PlayerManagedSettingsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Systems/StateUpdate/PlayerManagedSettingsSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FactoryEntityGenerators/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FactoryEntityGenerators/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactoryGenerator/EntityFactoryGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactoryGenerator/EntityFactoryGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FactoryGenerator/ServiceBaseGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactoryGenerator/ManagedSettingsShortcutsGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FactoryGenerator.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../FactoryGenerator.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FactoryGenerator.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../FactoryGenerator.pdb" afterDir="false" />
-    </list>
+    <list default="true" id="d9aafa71-1a04-4869-aa37-3781315b8e11" name="Changes" comment="Update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,28 +17,28 @@
     <setting file="mock://E:/Unity Project/Learning/UnityCodingStandards/Assets/Source Generation/FactoryEntityGenerators~/FactoryEntityGenerators/FactoryGenerator/EntityFactoryGenerator.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2h7CE19yvAE80EOg8IHsvb9KKwB" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\Touhma\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Touhma\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\Touhma\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Touhma\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Touhma\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Touhma\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
