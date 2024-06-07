@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9aafa71-1a04-4869-aa37-3781315b8e11" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/Attributes/EnumTagAttribute.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Scripts/Commons/Architectures/Attributes/EnumTagAttribute.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Settings/Enums.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Settings/Enums/ActorEnum.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Settings/Enums/ActorEnum.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FactoryGenerator/EnumsTagsComponentsGenerator.cs" afterDir="false" />
+    <list default="true" id="d9aafa71-1a04-4869-aa37-3781315b8e11" name="Changes" comment="boops">
+      <change afterPath="$PROJECT_DIR$/FactoryGenerator/DatabasesSettingsShortcutsGenerator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FactoryEntityGenerators/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FactoryEntityGenerators/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FactoryGenerator.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../FactoryGenerator.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FactoryGenerator.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../FactoryGenerator.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ServiceGenerator~/ServiceGenerator/.idea/.idea.ServiceGenerator/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FactoryGenerator.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FactoryGenerator.pdb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +55,7 @@
     <MESSAGE value="Fix Factories shortcuts" />
     <MESSAGE value="Fixed unmanaged settings shortcut !" />
     <MESSAGE value="Fix Managed Settings Shortcuts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix Managed Settings Shortcuts" />
+    <MESSAGE value="boops" />
+    <option name="LAST_COMMIT_MESSAGE" value="boops" />
   </component>
 </project>
