@@ -68,19 +68,20 @@ namespace ServiceGenerator {
             codeWriter.WriteLine("namespace Commons.Architectures {");
             codeWriter.Indent++;
 
-            codeWriter.WriteLine("public static class DBStatics {");
+            codeWriter.WriteLine("public static partial class DBStatics {");
             codeWriter.Indent++;
-            codeWriter.WriteLine("public abstract class StaticFieldKey { }");
+          
 
             foreach ((StructDeclarationSyntax structDeclaration, string Name, string Namespace) vStruct in validStructs) {
-                codeWriter.WriteLine($"public static readonly SharedStatic<{vStruct.Name}> {vStruct.Name} = SharedStatic<{vStruct.Name}>.GetOrCreate<{vStruct.Name}, StaticFieldKey>();");
+                codeWriter.WriteLine($"public abstract class {vStruct.Name}StaticFieldKey {{}}");
+                codeWriter.WriteLine($"public static readonly SharedStatic<{vStruct.Name}> {vStruct.Name} = SharedStatic<{vStruct.Name}>.GetOrCreate<{vStruct.Name}, {vStruct.Name}StaticFieldKey>();");
             }
 
             codeWriter.Indent--;
             codeWriter.WriteLine("}");
 
 
-            codeWriter.WriteLine("public static class DB {");
+            codeWriter.WriteLine("public static partial class DB {");
             codeWriter.Indent++;
 
             foreach ((StructDeclarationSyntax structDeclaration, string Name, string Namespace) vStruct in validStructs) {

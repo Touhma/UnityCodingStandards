@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9aafa71-1a04-4869-aa37-3781315b8e11" name="Changes" comment="boops">
-      <change afterPath="$PROJECT_DIR$/FactoryGenerator/DatabasesSettingsShortcutsGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Settings/Enums/ActorEnum.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Settings/Enums/ActorEnum.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Systems/StateUpdate/PlayerDoingStuffSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Scripts/Gameplay/Players/Systems/StateUpdate/PlayerDoingStuffSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FactoryEntityGenerators/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FactoryEntityGenerators/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FactoryGenerator.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FactoryGenerator.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactoryGenerator/DatabasesSettingsShortcutsGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FactoryGenerator/DatabasesSettingsShortcutsGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FactoryGenerator.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

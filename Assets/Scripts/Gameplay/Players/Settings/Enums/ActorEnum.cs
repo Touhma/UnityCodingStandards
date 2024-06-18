@@ -40,11 +40,6 @@ namespace Players.Settings.Enums {
         //Socket Support
         ConveyorPole = 60,
     }
-
-    public struct test {
-        private ActorConveyorTag top;
-
-    }
     
     
 }

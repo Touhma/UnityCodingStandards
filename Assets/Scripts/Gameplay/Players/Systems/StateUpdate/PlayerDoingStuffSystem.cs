@@ -3,7 +3,6 @@ using Players.Components;
 using Unity.Burst;
 using Unity.Entities;
 using UnityEngine;
-using EntityFactories = Commons.Architectures.EntityFactories;
 
 namespace Players.Systems {
     // Example of unmanaged Burstable System
